@@ -21,7 +21,9 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'birds.h5'
+MODEL_PATH = "model/birds.h5"
+model = load_model(MODEL_PATH, compile=False)
+
 
 # Load your trained model
 model = load_model(MODEL_PATH,compile=False)
